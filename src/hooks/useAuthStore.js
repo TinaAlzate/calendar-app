@@ -33,7 +33,7 @@ export const useAuthStore = () => {
 
     try {
 
-      const data = await FETCH('/auth/new', { name, email, password }, 'POST');
+      const data = await fetchWithBody('/auth/new', { name, email, password }, 'POST');
 
       localStorage.setItem('token', data.token);
       localStorage.setItem('token-init-date', new Date().getTime());

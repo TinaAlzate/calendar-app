@@ -2,7 +2,7 @@ import { getEnvVariables } from '../helpers';
 
 const { VITE_API_URL } = getEnvVariables();
 
-const baseURL = VITE_API_URL;
+export const baseURL = VITE_API_URL;
 
 export const fetchWithBody = async (path, body = {}, method) => {
 
